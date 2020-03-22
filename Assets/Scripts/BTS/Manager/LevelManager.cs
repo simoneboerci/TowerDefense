@@ -47,6 +47,8 @@ namespace BTS.Manager.LevelManager
 
         #region Public Methods
 
+        #region Level Generation
+
         public void LoadNextLevel()
         {
             //Check there is a level loaded
@@ -89,6 +91,10 @@ namespace BTS.Manager.LevelManager
             Camera.main.GetComponent<CameraScript>().UpdateCamera();
         }
 
+        #endregion
+
+        #region Getters
+
         public Texture2D GetCurrentLevel()
         {
             if (_currentLevelIndex < 0)
@@ -96,6 +102,8 @@ namespace BTS.Manager.LevelManager
 
             return levels[_currentLevelIndex];
         }
+
+        #endregion
 
         #endregion
     }

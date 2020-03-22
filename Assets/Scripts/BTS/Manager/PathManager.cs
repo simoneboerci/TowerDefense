@@ -19,5 +19,9 @@ namespace BTS.Manager.PathManager
 
         public const string SOTopDownCameraPath = SOCameraTypePath + "TopDownCameraType";
         public const string SOAngledCameraPath = SOCameraTypePath + "AngledCameraType";
+
+        protected const string SOWaveSpawnerPath = SOPath + "WaveSpawner/";
+
+        public const string SOWavePath = SOWaveSpawnerPath + "Wave";
     }
 }
