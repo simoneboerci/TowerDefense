@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bd9e53d7590fd459db3a5699011067, type: 3}
+  m_Name: GridTile_immutable
+  m_EditorClassIdentifier: 
+  graphics:
+  - mesh: {fileID: -7825289430055562144, guid: 4df0c52fa1ec2614189568edffc2c121, type: 3}
+    minMeshSize: 0.15
+    maxMeshSize: 0.3
+    material: {fileID: 2100000, guid: 043941e5540c8ab41b814d8c05df9aeb, type: 2}
+  - mesh: {fileID: -5597002278806442958, guid: 5d18acaa1d737be4f90bd95e1be55d0e, type: 3}
+    minMeshSize: 0.15
+    maxMeshSize: 0.2
+    material: {fileID: 2100000, guid: 043941e5540c8ab41b814d8c05df9aeb, type: 2}
