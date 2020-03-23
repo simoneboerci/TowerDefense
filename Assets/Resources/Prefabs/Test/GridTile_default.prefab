@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.7830189, g: 0.25485048, b: 0.25485048, a: 0}
+  isBuildable: 1
   _rend: {fileID: 1414727672910731071}
 --- !u!1 &1353947669519014529
 GameObject:
