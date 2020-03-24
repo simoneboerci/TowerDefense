@@ -19,5 +19,7 @@ namespace BTS.Manager.PathManager
 
         public const string SOTopDownCameraPath = SOCameraTypePath + "TopDownCameraType";
         public const string SOAngledCameraPath = SOCameraTypePath + "AngledCameraType";
+
+        public const string SOLevelPath = SOPath + "Level";
     }
 }

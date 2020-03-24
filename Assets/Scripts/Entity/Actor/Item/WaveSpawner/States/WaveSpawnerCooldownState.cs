@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using BTS.Manager.LevelManager;
+
+public class WaveSpawnerCooldownState : StateMachineBehaviour
+{
+    private WaveSpawner _script;
+
+    private float _timer;
+
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (_script == null)
+            _script = animator.transform.GetComponent<WaveSpawner>();
+
+        _timer = LevelManager.Instance.GetCurrentWave().delay;
+    }
+
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if(_timer > 0f)
+        {
+            _timer -= Time.deltaTime;
+        }
+        else
+        {
+            _script.ChangeState(WaveSpawner.States.Spawn);
+        }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
+    }
+}

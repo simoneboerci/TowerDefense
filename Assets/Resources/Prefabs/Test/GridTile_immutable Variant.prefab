@@ -96,23 +96,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1317030761370782800, guid: d47d1f5e840e18442af115471f4c8d6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517930236124492955, guid: d47d1f5e840e18442af115471f4c8d6e,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7825289430055562144, guid: 4df0c52fa1ec2614189568edffc2c121,
         type: 3}
-    - target: {fileID: 1317030761370782800, guid: d47d1f5e840e18442af115471f4c8d6e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2405703077218848877, guid: d47d1f5e840e18442af115471f4c8d6e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bef99ff0f23fe1641aef2f3b74807e33, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 301891390180851206, guid: d47d1f5e840e18442af115471f4c8d6e, type: 3}
+    - {fileID: -3801603291697129833, guid: d47d1f5e840e18442af115471f4c8d6e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d47d1f5e840e18442af115471f4c8d6e, type: 3}
 --- !u!1 &5623943363512050774 stripped
 GameObject:
