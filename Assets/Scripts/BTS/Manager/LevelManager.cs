@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Data.Level;
+using Data.Wave;
+
 using SB.TextureConverter;
 
 using Entity.Actor.Item.CameraScript;
@@ -12,17 +15,30 @@ namespace BTS.Manager.LevelManager
     {
         #region Public Variables
 
+        public enum KeyPoints
+        {
+            Start,
+            End,
+        }
+
         [Header("Level Creation")]
         public ColorCode colorCode;
         public Transform levelParent;
-        public List<Texture2D> levels;
+
+        [Header("Gameplay")]
+        public List<Level> levels;
 
         #endregion
 
-        #region Privare Variables
+        #region Private Variables
 
         private int _currentLevelIndex = -1;
+        private int _currentWaveIndex = 0;
+
         List<GameObject> _objects = new List<GameObject>();
+
+        private List<Vector3> _start = new List<Vector3>();
+        private List<Vector3> _end = new List<Vector3>();
 
         #endregion
 
@@ -39,8 +55,10 @@ namespace BTS.Manager.LevelManager
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && _currentLevelIndex + 1 < levels.Count)
+            {
                 LoadNextLevel();
+            }
         }
 
         #endregion
@@ -59,6 +77,10 @@ namespace BTS.Manager.LevelManager
                 {
                     Destroy(obj);
                 }
+
+                //Reset the start and the end of the level
+                _start = new List<Vector3>();
+                _end = new List<Vector3>();
             }
 
             //Check if there is another level
@@ -72,14 +94,14 @@ namespace BTS.Manager.LevelManager
             }
 
             //Load the next level
-            List<GameObject> _convertedTexture = TextureConverter.FromTextureToObjects(levels[_currentLevelIndex], colorCode);
+            List<GameObject> _convertedTexture = TextureConverter.FromTextureToObjects(levels[_currentLevelIndex].map, colorCode);
 
             //Create the level
             int _index = 0;
 
-            for (int x = 0; x < levels[_currentLevelIndex].width; x++)
+            for (int x = 0; x < levels[_currentLevelIndex].map.width; x++)
             {
-                for (int y = 0; y < levels[_currentLevelIndex].height; y++)
+                for (int y = 0; y < levels[_currentLevelIndex].map.height; y++)
                 {
                     GameObject _obj = Instantiate(_convertedTexture[_index], new Vector3(x, 0, y), Quaternion.identity, levelParent);
                     _objects.Add(_obj);
@@ -91,11 +113,26 @@ namespace BTS.Manager.LevelManager
             Camera.main.GetComponent<CameraScript>().UpdateCamera();
         }
 
+        public void AddKeyPoint(Vector3 position, KeyPoints keyPoint) 
+        {
+            switch (keyPoint)
+            {
+                case KeyPoints.Start:
+                    _start.Add(position);
+                    break;
+                case KeyPoints.End:
+                    _end.Add(position);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         #endregion
 
         #region Getters
 
-        public Texture2D GetCurrentLevel()
+        public Level GetCurrentLevel()
         {
             if (_currentLevelIndex < 0)
                 return levels[0];
@@ -103,7 +140,40 @@ namespace BTS.Manager.LevelManager
             return levels[_currentLevelIndex];
         }
 
+        public Texture2D GetCurrentMap()
+        {     
+            return GetCurrentLevel().map;
+        }
+
+        public Wave GetCurrentWave()
+        {
+            return GetCurrentLevel().waves[_currentWaveIndex];
+        }
+
+        public List<Vector3> GetStart()
+        {
+            return _start;
+        }
+
+        public List<Vector3> GetEnd()
+        {
+            return _end;
+        }
+
         #endregion
+
+        public bool NextWave()
+        {
+            if (_currentWaveIndex + 1 < GetCurrentLevel().waves.Count)
+            {
+                _currentWaveIndex++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         #endregion
     }

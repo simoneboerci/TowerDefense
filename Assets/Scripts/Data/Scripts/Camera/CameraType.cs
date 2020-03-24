@@ -33,7 +33,7 @@ namespace Data.Camera.CameraType
         {
             get
             {
-                return LevelManager.Instance.GetCurrentLevel();
+                return LevelManager.Instance.GetCurrentMap();
             }
         }
 
