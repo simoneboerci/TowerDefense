@@ -16,22 +16,20 @@ MonoBehaviour:
   waves:
   - delay: 2
     hordes:
-    - enemy: {fileID: -927199367670048503, guid: 881468bbf0af3af499c9ec0df78ef3a2,
-        type: 3}
-      enemyCount: 5
-      spawnRate: 1
-      cooldown: 3
     - enemy: {fileID: -927199367670048503, guid: 03eb173c2b4b0df47a1686f1f212fa19,
         type: 3}
+      enemyCount: 8
+      spawnRate: 1
+      cooldown: 3
+    - enemy: {fileID: -927199367670048503, guid: 881468bbf0af3af499c9ec0df78ef3a2,
+        type: 3}
       enemyCount: 12
-      spawnRate: 2
-      cooldown: 5
-    repetition: 0
+      spawnRate: 0.5
+      cooldown: 0
   - delay: 5
     hordes:
     - enemy: {fileID: -927199367670048503, guid: b77f1ca9c0a1469439f63ef418a94e45,
         type: 3}
-      enemyCount: 10
-      spawnRate: 0.5
+      enemyCount: 5
+      spawnRate: 2
       cooldown: 0
-    repetition: 0

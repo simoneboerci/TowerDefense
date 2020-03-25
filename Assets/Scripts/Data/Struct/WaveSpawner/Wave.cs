@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SB.TextureConverter
+namespace Data.Wave
 {
     [System.Serializable]
-    public struct ObjectReference
+    public struct Wave
     {
-        public Color color;
-        public GameObject obj;
+        public float delay;
+        public List<Horde> hordes;
     }
 }

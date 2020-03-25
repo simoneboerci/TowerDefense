@@ -1,0 +1,94 @@
+Assets 
+{
+	//Cartella di progetto
+
+	Components 
+	{
+		//Cartella utilizzata per l'allocamento di componenti
+		
+		StateMachine 
+		{
+			//Componenti di tipo "Animator" che permetteranno il funzionamento di una macchina a stati
+		}
+	}
+
+	//Cartella contenente gli script "low-level"
+
+	Core
+	{
+		//NON TOCCARE!
+	}
+
+	//Cartella che serve a contenere tutti i pacchetti importati
+
+	Packages
+	{
+		TextureConverter
+		{
+			//Un pacchetto che si occupa della conversione tra "Texture2D", "GameObject" e "byte"
+		}
+	}
+
+	//Cartella contenente tutte le risorse necessarie al funzionamento del gioco
+
+	Resources
+	{
+		//Cartella utlizzata per l'allocamento dei materiali
+		
+		Materials
+		{
+			Test
+			{
+				//Cartella che serve a contenere materiali temporanei
+			}
+		}
+
+		//Cartella utlizzata per l'allocamento dei modelli 3D
+
+		Models
+		{
+			Test
+			{
+				//Cartella che serve a contenere modelli temporanei
+			}
+		}
+
+		//Cartella utilizzata per l'allocamento dei prefabbricati
+
+		Prefabs
+		{
+			Test
+			{
+				//Cartella che serve a contenere prefabbricati utili solo per testare le meccaniche di gioco
+			}
+		}
+
+		//Cartella utilizzata per l'allocamento delle immagini 2D
+
+		Textures
+		{
+			Test
+			{
+				//Cartella che serve a contenere immagini 2D temporanee
+			}
+		}
+	}
+
+	//Cartella contenente tutte le scene di gioco
+
+	Scenes
+	{
+		Test
+		{
+			//Cartella utilizzata per scene temporanee
+		}
+	}
+
+	//Cartella contenente tutti gli script	
+
+	Scripts
+	{
+		//https://drive.google.com/open?id=1Jr8PBztkrRq6tR-ak2ancyykfvYq3jh2
+	}
+}
+		

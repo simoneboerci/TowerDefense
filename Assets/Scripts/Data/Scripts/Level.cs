@@ -4,7 +4,7 @@ using UnityEngine;
 
 using BTS.Manager.PathManager;
 
-namespace Data.Level {
+namespace Data.LevelCreation {
     [CreateAssetMenu(fileName = "Level", menuName = PathManager.SOLevelPath)]
     public class Level : Data
     {

@@ -50,6 +50,7 @@ namespace SB.TextureConverter
             return new List<T>();
         }
 
+        //Check if there is a match between two colors
         private static bool ColorMatch(Color color1, Color color2)
         {
             if (color1 == null || color2 == null)

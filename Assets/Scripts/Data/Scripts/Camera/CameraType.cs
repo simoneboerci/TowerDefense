@@ -53,6 +53,7 @@ namespace Data.Camera.CameraType
 
         #region Private Methods
 
+        //Compensate the camera fov by adjusting its position
         protected Vector3 CompensateFOV(Vector3 position, bool XCorrection, bool YCorrection, bool ZCorrection)
         {
             if (XCorrection)

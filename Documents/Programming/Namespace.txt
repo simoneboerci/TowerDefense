@@ -1,0 +1,43 @@
+-----------------------------------------------------
+Manager
+-----------------------------------------------------
+
+- BTS.Manager.GameManager
+- BTS.Manager.UIManager
+- BTS.Manager.LevelManager
+- BTS.Manager.PathManager
+
+-----------------------------------------------------
+Camera
+-----------------------------------------------------
+
+- Entity.Actor.Item.CameraScript
+- Data.Camera.CameraType
+
+-----------------------------------------------------
+Level Creation
+-----------------------------------------------------
+
+- Entity.Actor.Item.LevelCreation
+- Data.LevelCreation
+
+-----------------------------------------------------
+Mesh Generator
+-----------------------------------------------------
+
+- Entity.Actor.Item.MeshGenerator
+- Data.GraphicsData.MeshGeneratorData
+- Data.GraphicsData
+
+-----------------------------------------------------
+Wave Spawner
+-----------------------------------------------------
+
+- Entity.Actor.Item.WaveSpawner
+- States.WaveSpawnerStates
+
+-----------------------------------------------------
+Packages
+-----------------------------------------------------
+
+- SB.TextureConverter
