@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Entity.Actor.Item.WaveSpawner;
-
 using BTS.Manager.LevelManager;
+using BTS.Manager.GameManager;
 
-namespace States.WaveSpawnerStates
+namespace States.GameManagerStates
 {
-    public class WaveSpawnerSpawnState : StateMachineBehaviour
+    public class GMGameplayVictoryState : StateMachineBehaviour
     {
-        private WaveSpawner _script;
-
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (_script == null)
-                _script = animator.transform.GetComponent<WaveSpawner>();
+            GameManager.Instance.currentState = GameManager.States.Victory;
 
-            _script.currentState = WaveSpawner.States.Spawn;
-
-            _script.StartWave();
+            if (LevelManager.Instance.NextWave())
+            {
+                GameManager.Instance.ChangeState(GameManager.States.Placement.ToString());
+            }
+            else
+            {
+                GameManager.Instance.ChangeState(GameManager.States.EndGame.ToString());
+            }
         }
 
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

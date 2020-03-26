@@ -19,12 +19,12 @@ MonoBehaviour:
     - enemy: {fileID: -927199367670048503, guid: 03eb173c2b4b0df47a1686f1f212fa19,
         type: 3}
       enemyCount: 8
-      spawnRate: 1
+      spawnRate: 5
       cooldown: 3
     - enemy: {fileID: -927199367670048503, guid: 881468bbf0af3af499c9ec0df78ef3a2,
         type: 3}
       enemyCount: 12
-      spawnRate: 0.5
+      spawnRate: 10
       cooldown: 0
   - delay: 5
     hordes:

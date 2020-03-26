@@ -19,6 +19,8 @@ namespace States.WaveSpawnerStates
             if (_script == null)
                 _script = animator.transform.GetComponent<WaveSpawner>();
 
+            _script.currentState = WaveSpawner.States.Cooldown; 
+
             _timer = LevelManager.Instance.GetCurrentWave().delay;
         }
 
@@ -30,7 +32,7 @@ namespace States.WaveSpawnerStates
             }
             else
             {
-                _script.ChangeState(WaveSpawner.States.Spawn);
+                _script.ChangeState(WaveSpawner.States.Spawn.ToString());
             }
         }
 

@@ -8,10 +8,12 @@ using BTS.Manager.LevelManager;
 
 using Data.Wave;
 
+using Interfaces.IStateMachine;
+
 namespace Entity.Actor.Item.WaveSpawner
 {
     [RequireComponent(typeof(Animator))]
-    public class WaveSpawner : MonoBehaviour
+    public class WaveSpawner : MonoBehaviour, IStateMachine
     {
         #region Public Variables
 
@@ -21,6 +23,8 @@ namespace Entity.Actor.Item.WaveSpawner
             Spawn,
             Wait,
         }
+
+        public States currentState;
 
         //Enemy parent
         public Transform enemyPool;
@@ -53,9 +57,9 @@ namespace Entity.Actor.Item.WaveSpawner
         #region Public Methods
 
         //Change the state of the State Machine
-        public void ChangeState(States state)
+        public void ChangeState(string state)
         {
-            _animator.SetTrigger(state.ToString());
+            _animator.SetTrigger(state);
         }
 
         #region Wave Spawning
@@ -78,7 +82,7 @@ namespace Entity.Actor.Item.WaveSpawner
             }
 
             //Wait when you're done spawning
-            ChangeState(States.Wait);
+            ChangeState(States.Wait.ToString());
         }
 
         private IEnumerator SpawnEnemies(Horde horde)
