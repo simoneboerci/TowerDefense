@@ -859,8 +859,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7837e26c31f122d4bb097c64ddc8e433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBuild: {fileID: 474530207109541490, guid: 1f5513a4e6f994a41ab378b253ad8abf,
-    type: 3}
+  _objectToBuild: 2
+  _tile_I: {fileID: 7609404218102781295, guid: 5fb362d4cd759b643be1af3ccc9be230, type: 3}
+  _tile_T: {fileID: 8674643053170449545, guid: bccc1f47b55008845a74342e4164caf5, type: 3}
+  _tile_L: {fileID: 612941820198731585, guid: 5f48a788300cda049847679decef3ff6, type: 3}
 --- !u!4 &979703858
 Transform:
   m_ObjectHideFlags: 0
@@ -1268,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1990347918
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ namespace BTS.Manager.BuildManager
         public void Build(GameObject obj, Transform pos)
         {
             GameObject g = Instantiate(obj, pos);
-            g.transform.position += Vector3.up;
+            g.transform.position += Vector3.up * 0.08f;
         }
 
         public void Demolish(GameObject obj)

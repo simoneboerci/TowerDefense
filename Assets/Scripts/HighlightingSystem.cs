@@ -4,7 +4,7 @@ using UnityEngine;
 using BTS.Manager.SelectionManager;
 using BTS.Manager.BuildManager;
 
-[RequireComponent(typeof(MeshRenderer))]
+
 public class HighlightingSystem : MonoBehaviour
 {
     #region Public Variables
@@ -38,6 +38,8 @@ public class HighlightingSystem : MonoBehaviour
     {
         if (isActive)
         {
+            Debug.Log(transform.gameObject.name);
+            Debug.Log(_rend.material.color);
             _rend.material.color = hoverColor;
         }
     }
@@ -58,6 +60,13 @@ public class HighlightingSystem : MonoBehaviour
             {
                 transform.parent.GetComponent<HighlightingSystem>().isActive = true;
                 BuildManager.Instance.Demolish(this.gameObject);
+            }
+        }
+        if (isActive)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                this.transform.Rotate(Vector3.up * 90);
             }
         }
     }
