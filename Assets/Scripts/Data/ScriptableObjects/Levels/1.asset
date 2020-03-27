@@ -33,3 +33,10 @@ MonoBehaviour:
       enemyCount: 5
       spawnRate: 2
       cooldown: 0
+  - delay: 5
+    hordes:
+    - enemy: {fileID: -927199367670048503, guid: b77f1ca9c0a1469439f63ef418a94e45,
+        type: 3}
+      enemyCount: 5
+      spawnRate: 2
+      cooldown: 0

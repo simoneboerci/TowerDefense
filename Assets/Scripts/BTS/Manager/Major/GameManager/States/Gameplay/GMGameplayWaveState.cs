@@ -14,8 +14,6 @@ namespace States.GameManagerStates
 
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            GameManager.Instance.currentState = GameManager.States.Wave;
-
             _waveSpawner = GameManager.Instance.waveSpawner;
 
             _waveSpawner.ChangeState(WaveSpawner.States.Cooldown.ToString());
@@ -23,6 +21,9 @@ namespace States.GameManagerStates
 
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            if(GameManager.Instance.currentState != GameManager.States.Wave)
+                GameManager.Instance.currentState = GameManager.States.Wave;
+
             if (Input.GetKeyDown(GameManager.Instance.die))
             {
                 GameManager.Instance.ChangeState(GameManager.States.GameOver.ToString());

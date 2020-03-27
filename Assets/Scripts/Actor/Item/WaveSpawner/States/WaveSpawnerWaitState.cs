@@ -24,7 +24,7 @@ namespace States.WaveSpawnerStates
 
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (_script.enemies.Count <= 0)
+            if (GameManager.Instance.currentState == GameManager.States.Wave && _script.enemies.Count <= 0)
             {
                 GameManager.Instance.ChangeState(GameManager.States.Victory.ToString());
             }
