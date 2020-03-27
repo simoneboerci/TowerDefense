@@ -35,8 +35,14 @@ namespace BTS.Manager.GameManager
 
         [Header("DEBUG")]
         public KeyCode nextWave;
-        public KeyCode destroyOneEnemy;
         public KeyCode die;
+        [Space(10)]
+        public KeyCode destroyOneEnemy;
+        public KeyCode damageOneEnemy;
+        public bool autoFire;
+        [Range(0f, 30f)]
+        public float fireRate = 1f;
+        public float damage;  
 
         #endregion
 

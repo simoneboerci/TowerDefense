@@ -21,5 +21,9 @@ namespace BTS.Manager.PathManager
         public const string SOAngledCameraPath = SOCameraTypePath + "AngledCameraType";
 
         public const string SOLevelPath = SOPath + "Level";
+
+        protected const string SOCharacterDataPath = SODataPath + "CharacterData/";
+
+        public const string SOEnemyDataPath = SOCharacterDataPath + "EnemyData";
     }
 }
