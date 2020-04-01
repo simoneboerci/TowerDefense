@@ -28,6 +28,9 @@ namespace BTS.Manager.LevelManager
         [Header("Gameplay")]
         public List<Level> levels;
 
+        //[HideInInspector]
+        public List<Vector3> path = new List<Vector3>();
+
         #endregion
 
         #region Private Variables

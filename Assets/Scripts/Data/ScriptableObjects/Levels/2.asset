@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999900ef30d940b41960bc0175ae308e, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  map: {fileID: 2800000, guid: e6f7418414459684ab5e2b9c8e705fd7, type: 3}
+  waves:
+  - delay: 2
+    hordes:
+    - enemy: {fileID: 1414836930947737467, guid: b704906a717f3a2479ee8d62a13f3cba,
+        type: 3}
+      enemyCount: 8
+      spawnRate: 0.3
+      cooldown: 3
+    - enemy: {fileID: 5009569044678624066, guid: 41f888ade222f1c479984ac8dcbb2a79,
+        type: 3}
+      enemyCount: 12
+      spawnRate: 0.2
+      cooldown: 0
+  - delay: 5
+    hordes:
+    - enemy: {fileID: 3880245352837077328, guid: f3fde0be3b72b824aabfb394793376b9,
+        type: 3}
+      enemyCount: 5
+      spawnRate: 0.4
+      cooldown: 0
