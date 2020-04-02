@@ -927,6 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5259528a1ed3f448ba2061989fb914b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lives: 5
   currentState: 0
   waveSpawner: {fileID: 2028601905}
   nextWave: 110
@@ -1221,3 +1222,4 @@ MonoBehaviour:
   levelParent: {fileID: 340765707}
   levels:
   - {fileID: 11400000, guid: d08b0de6028bb184bb7e37884c62380b, type: 2}
+  path: []

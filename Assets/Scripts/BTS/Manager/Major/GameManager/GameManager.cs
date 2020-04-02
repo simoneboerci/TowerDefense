@@ -15,6 +15,9 @@ namespace BTS.Manager.GameManager
 
         private Animator _animator;
 
+        [SerializeField]
+        private int _lives;
+
         #endregion
 
         #region Public Methods
@@ -56,6 +59,14 @@ namespace BTS.Manager.GameManager
         #endregion
 
         #region Public Methods
+
+        public void DecreaseLives()
+        {
+            if (_lives - 1 >= 0)
+                _lives--;
+            else
+                ChangeState(States.GameOver.ToString());
+        }
 
         public void ChangeState(string state)
         {

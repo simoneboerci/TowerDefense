@@ -20,5 +20,7 @@ namespace Data.Characters.Enemy
         public float life = 100f;
 
         public float movementSpeed = 2;
+        [Range(3f, 20f)]
+        public float rotationSpeed = 1;
     }
 }

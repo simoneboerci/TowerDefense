@@ -16,4 +16,5 @@ MonoBehaviour:
   description: GG
   size: 0.6
   life: 100
-  movementSpeed: 0.2
+  movementSpeed: 0.4
+  rotationSpeed: 4
