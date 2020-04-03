@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d2b26bed1fbc7489ab40a9de2acbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.9339623, g: 0.89850885, b: 0.066082224, a: 0}
+  hoverColor: {r: 0.9339623, g: 0.8986188, b: 0.066082224, a: 0}
   isBuildable: 0
   _rend: {fileID: 5006607697202464726}
 --- !u!1 &5755509198842284828

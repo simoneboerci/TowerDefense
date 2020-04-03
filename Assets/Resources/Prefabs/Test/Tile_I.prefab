@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d2b26bed1fbc7489ab40a9de2acbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.981875, b: 0, a: 0}
+  hoverColor: {r: 0.9372549, g: 0.9019608, b: 0.06666667, a: 0}
   isBuildable: 0
   _rend: {fileID: 7183827962900327156}
 --- !u!65 &-617628416049936130

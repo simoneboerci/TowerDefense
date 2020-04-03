@@ -16,8 +16,7 @@ namespace BTS.Manager.SelectionManager
             Tile_T,
             Tile_L,
         }
-        [SerializeField]
-        private Tiles _objectToBuild;
+
         [Header("Prefabs: ")]
         [SerializeField]
         private GameObject _tile_I;
@@ -26,13 +25,20 @@ namespace BTS.Manager.SelectionManager
         [SerializeField]
         private GameObject _tile_L;
 
+        private GameObject _objectToBuild;
+
         #endregion
+
+        private void Start()
+        {
+            _objectToBuild = _tile_I;
+        }
 
         public void SetPositionToBuild(Transform pos)
         {
             positionToBuild = pos;
-            GameObject _g = new GameObject();
-            switch (_objectToBuild)
+            //GameObject _g = new GameObject();
+            /*switch (_objectToBuild)
             {
                 case Tiles.Tile_I:
                     _g = _tile_I;
@@ -45,18 +51,15 @@ namespace BTS.Manager.SelectionManager
                     break;
                 default:
                     break;
-            }
-            BuildManager.BuildManager.Instance.Build(_g, positionToBuild);
-        }
-
-        private void Build()
-        {
-
+            }*/
+            BuildManager.BuildManager.Instance.Build(_objectToBuild, positionToBuild);
         }
 
         public void SetObjectToBuild(GameObject obj)
         {
-            //objectToBuild = obj;
+            _objectToBuild = obj;
         }
     }
+    // passes an index of the list of gameobjects to build and then
+    // set button text based on the name of the object passed to the function
 }
