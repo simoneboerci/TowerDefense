@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1353947668749720979}
-  - component: {fileID: 5086756812738687654}
+  - component: {fileID: 181560161550686333}
+  - component: {fileID: -1767730108850789463}
   m_Layer: 0
   m_Name: GridTile_default
   m_TagString: Untagged
@@ -32,7 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5086756812738687654
+--- !u!65 &181560161550686333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353947668749720980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1767730108850789463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +55,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353947668749720980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b12e01db3520da4283c1ad6b70cb83e, type: 3}
+  m_Script: {fileID: 11500000, guid: 33d2b26bed1fbc7489ab40a9de2acbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverColor: {r: 0.7830189, g: 0.25485048, b: 0.25485048, a: 0}
+  isBuildable: 1
+  _rend: {fileID: 1414727672910731071}
 --- !u!1 &1353947669519014529
 GameObject:
   m_ObjectHideFlags: 0
